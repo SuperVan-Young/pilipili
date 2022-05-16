@@ -32,12 +32,9 @@ header {
     display: inline-block;
 }
 
-/* header > a:link, a:hover, a:visited {
+.header-wrapper a:link, .header-wrapper a:hover, .header-wrapper a:visited {
     color: white;
-} */
-
-.header-wrapper a:link, a:hover, a:visited {
-    color: white;
+    text-decoration: none;
 }
 
 .left-header {
@@ -61,7 +58,7 @@ header {
 nav {
     margin: 0 auto;
     position: relative;
-    width: 1600px;
+    width: 1650px;
     height: 100px;
     min-width: 1000px;
 }
@@ -69,25 +66,41 @@ nav {
 .nav-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-/* nav > a:link, a:hover, a:visited {
+.nav-wrapper a:link, .nav-wrapper a:hover, .nav-wrapper a:visited {
     color: black;
-} */
-
-.nav-wrapper a:link, a:hover, a:visited {
-    color: black;
+    text-decoration: none;
 }
 
-.left-nav table{
-    border-spacing: 30px 5px;
+.left-nav table {
+    border-spacing: 30px 10px;
 }
 
-.center-nav table{
-    border-spacing: 80px 5px;
+.center-nav table {
+    border-spacing: 60px 10px;
+    font-size: 13px;
 }
 
-.right-nav table{
-    border-spacing: 30px 5px;
+.right-nav table {
+    border-spacing: 30px 10px;
+}
+
+.center-nav span {
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+    padding: 1px 2px;
+    font-size: 5px;
+    color: #fff;
+    background-color: #7acce6;
+    border-radius: 3px;
+}
+
+.home-page-wrapper {
+    margin: 0 auto;
+    width: 1650px;
+    display: flex;
+    justify-content: space-around;
 }

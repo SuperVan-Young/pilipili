@@ -59,6 +59,9 @@ header {
     text-align: center;
     
 }
+.header-wrapper li:first-child {
+    margin-left: -5px;
+}
 
 .header-wrapper a:link, .header-wrapper a:hover, .header-wrapper a:visited {
     color: white;
@@ -179,7 +182,7 @@ header {
 .zhuzhan {
     font-family: bilifont;
     font-style: normal;
-    font-size: 17px;
+    font-size: 18px;
     vertical-align: middle;
 }
 .zhuzhan::before {

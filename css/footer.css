@@ -1,0 +1,88 @@
+footer {
+    background-color: #f6f9fa;
+}
+
+footer > div {
+    margin: 0 auto;
+    padding: 40px 0 80px 0;
+    width: 1600px;
+}
+
+.footer-top a:link, .footer-top a:hover, .footer-top a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.split-line {
+    height: 200px;
+    width: 1px;
+    background-color: #eeeeee;
+}
+
+.download-APP {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 50px;
+    color: #585f69;
+}
+.download-APP:before {
+    content: "\E752";
+}
+
+td p {
+    text-align: left;
+    width: 150px;
+    margin-right: 50px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 0;
+    color: #212121;
+    font-size: 14px;
+}
+th p {
+    text-align: left;
+    width: 150px;
+    margin-right: 50px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    color: #999999;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.footer-top li {
+    display: inline-block;
+    text-align: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 14px;
+}
+.footer-top img {
+    width: 50px;
+}
+.sina-weibo {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 50px;
+    color: #fe596c;
+}
+.sina-weibo:before {
+    content: "\E71C";
+}
+
+.official-wechat {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 50px;
+    color: #42c86b;
+}
+.official-wechat:before {
+    content: "\E751";
+}

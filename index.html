@@ -1,453 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/videolist.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-wrapper">
-            <div class="left-header">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="zhuzhan">
-                            </i>
-                            主站
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">番剧</a>
-                    </li>
-                    <li>
-                        <a href="#">游戏中心</a>
-                    </li>
-                    <li>
-                        <a href="#">直播</a>
-                    </li>
-                    <li>
-                        <a href="#">会员购</a>
-                    </li>
-                    <li>
-                        <a href="#">漫画</a>
-                    </li>
-                    <li>
-                        <a href="#">赛事</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="download-client-trigger__icon">
-                                <path d="M7.23181 8.65895V1.75796C7.23181 1.33935 7.57582 1 8.00018 1C8.42453 1 8.76854 1.33935 8.76854 1.75796V8.67097L9.98589 
+      <div class="header-wrapper">
+        <div class="left-header">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="zhuzhan"> </i>
+                主站
+              </a>
+            </li>
+            <li>
+              <a href="#">番剧</a>
+            </li>
+            <li>
+              <a href="#">游戏中心</a>
+            </li>
+            <li>
+              <a href="#">直播</a>
+            </li>
+            <li>
+              <a href="#">会员购</a>
+            </li>
+            <li>
+              <a href="#">漫画</a>
+            </li>
+            <li>
+              <a href="#">赛事</a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="download-client-trigger__icon"
+                >
+                  <path
+                    d="M7.23181 8.65895V1.75796C7.23181 1.33935 7.57582 1 8.00018 1C8.42453 1 8.76854 1.33935 8.76854 1.75796V8.67097L9.98589 
                                 7.47009C10.286 7.17409 10.7725 7.17409 11.0725 7.47009C11.3726 7.7661 11.3726 8.24601 11.0725 8.54201L8.54958 11.0308C8.24952 
                                 11.3268 7.76302 11.3268 7.46295 11.0308L4.94002 8.54201C4.63995 8.24601 4.63995 7.7661 4.94002 7.47009C5.24008 7.17409 5.72658 
-                                7.17409 6.02665 7.47009L7.23181 8.65895Z" fill="currentColor"></path><path d="M3.48023 4.29936C2.40686 4.29936 1.53672 5.15772 
+                                7.17409 6.02665 7.47009L7.23181 8.65895Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M3.48023 4.29936C2.40686 4.29936 1.53672 5.15772 
                                 1.53672 6.21656V11.5669C1.53672 12.6257 2.40686 13.4841 3.48023 13.4841H12.5198C13.5931 13.4841 14.4633 12.6257 14.4633 
                                 11.5669V6.21656C14.4633 5.15772 13.5931 4.29936 12.5198 4.29936H11.6158C11.1915 4.29936 10.8475 3.96001 10.8475 3.5414C10.8475 
                                 3.12279 11.1915 2.78344 11.6158 2.78344H12.5198C14.4418 2.78344 16 4.3205 16 6.21656V11.5669C16 13.4629 14.4418 15 12.5198 
                                 15H3.48023C1.55815 15 0 13.4629 0 11.5669V6.21656C0 4.3205 1.55815 2.78344 3.48023 2.78344H4.38418C4.80853 2.78344 5.15254 
-                                3.12279 5.15254 3.5414C5.15254 3.96001 4.80853 4.29936 4.38418 4.29936H3.48023Z" fill="currentColor"></path></svg>
-                            下载客户端
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-            <div class="center-header">
-                <div class="search-bar">
-                    <form class="search-form">
-                        <input type="text" autocomplete="off" placeholder="搜索" class="search-input">
-                        <div class="search-button-wrapper">
-                            <button type="button" class="search-button"></button>
-                        </div> 
-                    </form>
-                </div>
-            </div>
-            <div class="right-header">
-                <ul>
-                    <li>
-                        <span>
-                           <a href="#"><img src="img/head.webp"></a> 
-                        </span>
-                    </li>
-                    <li>
-                        <a href="#">大会员</a>
-                    </li>
-                    <li>
-                        <a href="#">消息</a>
-                    </li>
-                    <li>
-                        <a href="#">动态</a>
-                    </li>
-                    <li>
-                        <a href="#">收藏</a>
-                    </li>
-                    <li>
-                        <a href="#">历史</a>
-                    </li>
-                    <li>
-                        <a href="#">创作中心</a>
-                    </li>
-                    <li class="contrib">
-                        <a href="#">
-                            <span>投稿</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                                3.12279 5.15254 3.5414C5.15254 3.96001 4.80853 4.29936 4.38418 4.29936H3.48023Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                下载客户端
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="header-content">
-            <a href="#">
-                <img src="./img/bililogo.png">
-            </a>
+        <div class="center-header">
+          <div class="search-bar">
+            <form class="search-form">
+              <input
+                type="text"
+                autocomplete="off"
+                placeholder="搜索"
+                class="search-input"
+              />
+              <div class="search-button-wrapper">
+                <button type="button" class="search-button"></button>
+              </div>
+            </form>
+          </div>
         </div>
+        <div class="right-header">
+          <ul>
+            <li>
+              <span>
+                <a href="#"><img src="img/head.webp" /></a>
+              </span>
+            </li>
+            <li>
+              <a href="#">大会员</a>
+            </li>
+            <li>
+              <a href="#">消息</a>
+            </li>
+            <li>
+              <a href="#">动态</a>
+            </li>
+            <li>
+              <a href="#">收藏</a>
+            </li>
+            <li>
+              <a href="#">历史</a>
+            </li>
+            <li>
+              <a href="#">创作中心</a>
+            </li>
+            <li class="contrib">
+              <a href="#">
+                <span>投稿</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-content">
+        <a href="#">
+          <img src="./img/bililogo.png" />
+        </a>
+      </div>
     </header>
 
     <nav>
-        <div class="nav-wrapper">
-            <div class="left-nav">
-                <table>
-                    <tr>
-                        <td>
-                            <a href="#">首页</a>
-                        </td>
-                        <td>
-                            <a href="#">动态</a>
-                        </td>
-                        <td>
-                            <a href="#">热门</a>
-                        </td>
-                        <td>
-                            <a href="#">频道</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="center-nav">
-                <table>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                动画
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                音乐
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                舞蹈
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                知识
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                生活
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                时尚
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                娱乐
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                放映厅
-                                <span>224</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                番剧
-                                <span>148</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                国创
-                                <span>762</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                游戏
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                科技
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                鬼畜
-                                <span>532</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                资讯
-                                <span>719</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                影视
-                                <span>999+</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">更多</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="right-nav">
-                <table>
-                    <tr>
-                        <td>
-                            <a href="#">专栏</a>
-                        </td>
-                        <td>
-                            <a href="#">活动</a>
-                        </td>
-                        <td>
-                            <a href="#">社区中心</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">直播</a>
-                        </td>
-                        <td>
-                            <a href="#">课堂</a>
-                        </td>
-                        <td>
-                            <a href="#">新歌热榜</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+      <div class="nav-wrapper">
+        <div class="left-nav">
+          <table>
+            <tr>
+              <td>
+                <a href="#">首页</a>
+              </td>
+              <td>
+                <a href="#">动态</a>
+              </td>
+              <td>
+                <a href="#">热门</a>
+              </td>
+              <td>
+                <a href="#">频道</a>
+              </td>
+            </tr>
+          </table>
         </div>
+        <div class="center-nav">
+          <table>
+            <tr>
+              <td>
+                <a href="#">
+                  动画
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  音乐
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  舞蹈
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  知识
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  生活
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  时尚
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  娱乐
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  放映厅
+                  <span>224</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  番剧
+                  <span>148</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  国创
+                  <span>762</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  游戏
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  科技
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  鬼畜
+                  <span>532</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  资讯
+                  <span>719</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  影视
+                  <span>999+</span>
+                </a>
+              </td>
+              <td>
+                <a href="#">更多</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="right-nav">
+          <table>
+            <tr>
+              <td>
+                <a href="#">专栏</a>
+              </td>
+              <td>
+                <a href="#">活动</a>
+              </td>
+              <td>
+                <a href="#">社区中心</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">直播</a>
+              </td>
+              <td>
+                <a href="#">课堂</a>
+              </td>
+              <td>
+                <a href="#">新歌热榜</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </nav>
 
     <main class="main-layout">
-        <!-- Recommend -->
-        <section class="main-grid">
-        </section>
+      <!-- Recommend -->
+      <section class="main-grid"></section>
 
-        <!-- Popularize -->
-        <section class="main-grid"></section>
+      <!-- Popularize -->
+      <section class="main-grid"></section>
 
-        <!-- Live stream -->
-        <section class="main-grid"></section>
+      <!-- Live stream -->
+      <section class="main-grid"></section>
 
-        <!-- Knowledge -->
-        <section class="main-grid">
-            <div class="video-card-list">
-                <div class="video-card-list-header"></div>
-                <div class="video-card-list-content">
-                    <div class="video-card-list-element"></div>
+      <!-- Knowledge -->
+      <section class="main-grid">
+        <div class="video-card-list">
+          <div class="video-card-list-header">知识</div>
+          <div class="video-card-list-content">
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+          </div>
+        </div>
+        <aside class="ranking-list">
+            <div class="ranking-list-header">
+                排行榜
+            </div>
+            <div class="ranking-list-content">
+                <div class="ranking-list-item">
+                    震惊!
                 </div>
             </div>
-            <aside class="ranking-list"></aside>
-        </section>
+        </aside>
+      </section>
     </main>
 
-    <div class="side-bar">
-
-    </div>
+    <div class="side-bar"></div>
 
     <footer>
-        <div class="footer-top">
-            <div>
-                <table>
-                    <tr>
-                        <th><p>bilibili</p></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>关于我们</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>友情链接</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>联系我们</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>隐私政策</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>用户协议</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>bilibili认证</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>加入我们</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>Investor Relations</p>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="split-line"></div>
-            <div>
-                <table>
-                    <tr>
-                        <th><p>传送门</p></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>协议汇总</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>帮助中心</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>名人堂</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>活动中心</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>社区中心</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>MCN管理中心</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>活动专题页</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>壁纸站</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>高级弹幕</p>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#">
-                                <p>侵权申诉</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>广告合作</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <p>品牌号官网</p>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="split-line"></div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="download-APP"></i>
-                            <p>下载APP</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/charity.png">
-                            <p>公益</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="sina-weibo"></i>
-                            <p>新浪微博</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="official-wechat"></i>
-                            <p>新浪微博</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer-top">
+        <div>
+          <table>
+            <tr>
+              <th><p>bilibili</p></th>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>关于我们</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>友情链接</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>联系我们</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>隐私政策</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>用户协议</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>bilibili认证</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>加入我们</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>Investor Relations</p>
+                </a>
+              </td>
+            </tr>
+          </table>
         </div>
-
-        <div class="footer-bottom">
-
+        <div class="split-line"></div>
+        <div>
+          <table>
+            <tr>
+              <th><p>传送门</p></th>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>协议汇总</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>帮助中心</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>名人堂</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>活动中心</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>社区中心</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>MCN管理中心</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>活动专题页</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>壁纸站</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>高级弹幕</p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">
+                  <p>侵权申诉</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>广告合作</p>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <p>品牌号官网</p>
+                </a>
+              </td>
+            </tr>
+          </table>
         </div>
+        <div class="split-line"></div>
+        <div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="download-APP"></i>
+                <p>下载APP</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/charity.png" />
+                <p>公益</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="sina-weibo"></i>
+                <p>新浪微博</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="official-wechat"></i>
+                <p>新浪微博</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom"></div>
     </footer>
-</body>
+  </body>
+</html>

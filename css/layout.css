@@ -1,12 +1,21 @@
 /* 主页部分整体布局，各大区块基本设置 */
 
 .main-layout {
-  width: 100%;
+  width: 86%;
 
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
+/* 通用分区grid
+内部元素需要占据合适的span
+*/
 .main-grid {
+  display: grid;
+  column-gap: 12px;
   margin-bottom: 56px;
+
+  /* 具体分多少列，后面改成响应式的 */
+  grid-column: 5;
+  grid-template-columns: repeat(5, 1fr);
 }

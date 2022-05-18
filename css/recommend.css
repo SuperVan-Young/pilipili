@@ -1,0 +1,16 @@
+/* 推荐栏 */
+
+.recommend-container {
+  width: 100%;
+  display: grid;
+  column-gap: 12px;
+  grid-template-columns: repeat(5, 1fr);
+
+  /* TODO: 响应式 */
+  grid-column-end: span 5;
+}
+
+.recommend-swipe {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}

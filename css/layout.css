@@ -14,7 +14,7 @@
   column-gap: 12px;
   margin-bottom: 56px;
 
-  /* 具体分多少列，后面改成响应式的 */
+  /* TODO: 响应式 */
   grid-column: 5;
   grid-template-columns: repeat(5, 1fr);
 }

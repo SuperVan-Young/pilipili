@@ -7,8 +7,7 @@
   padding-right: 7%;
 }
 
-/* 通用分区grid
-内部元素需要占据合适的span
+/* 通用分区grid，内部元素需要占据合适的span
 */
 .main-grid {
   display: grid;
@@ -18,4 +17,21 @@
   /* 具体分多少列，后面改成响应式的 */
   grid-column: 5;
   grid-template-columns: repeat(5, 1fr);
+}
+
+/* 通用的header，标题和按钮分居两侧 */
+.area-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+  height: 34px;
+  font-size: 24px;
+}
+
+.area-header .left {
+}
+
+.area-header .right {
 }

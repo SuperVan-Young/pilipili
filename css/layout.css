@@ -1,0 +1,12 @@
+/* 主页部分整体布局，各大区块基本设置 */
+
+.main-layout {
+  width: 100%;
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.main-grid {
+  margin-bottom: 56px;
+}

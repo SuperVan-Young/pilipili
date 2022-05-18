@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/videolist.css" />
+    <link rel="stylesheet" href="./css/recommend.css" />
+>>>>>>> layout
   </head>
   <body>
     <header>
@@ -274,52 +280,117 @@
       </div>
     </nav>
 
-    <main>
-      <section class="home-page">
-        <div class="home-page-wrapper">
-          <table class="home-pgae-table">
-            <tr>
-              <td rowspan="2" colspan="3">
-                <img src="./img/homepage-large.webp" height="250px" />
-              </td>
-              <td>
-                <img src="./img/homepage_1.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_1.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_1.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_1.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_1.webp" height="120px" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src="./img/homepage_2.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_2.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_2.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_2.webp" height="120px" />
-              </td>
-              <td>
-                <img src="./img/homepage_2.webp" height="120px" />
-              </td>
-            </tr>
-          </table>
+    <main class="main-layout">
+      <!-- 推荐 -->
+      <section class="main-grid">
+        <div class="recommend-container">
+          <div class="recommend-swipe"></div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
+          <div class="video-card-list-item">
+            <img src="img/homepage_1.webp" alt="" />
+            <div class="video-card-list-item-title">视频标题</div>
+            <div class="video-card-list-item-info">视频信息</div>
+          </div>
         </div>
       </section>
-      <section class="popularize"></section>
-      <section class="live-stream"></section>
+
+      <!-- Popularize -->
+      <section class="main-grid"></section>
+
+      <!-- Live stream -->
+      <section class="main-grid"></section>
+
+      <!-- Advertisement -->
+      <section class="advertisement">
+        <img src="img/longadvertisement.jpg" alt="">
+      </section>
+
+      <!-- Knowledge -->
+      <section class="main-grid">
+        <div class="video-card-list">
+          <div class="area-header">
+            <div class="left">知识</div>
+            <div class="right">
+              <button class="area-header-button">
+                <span class="area-header-button-icon-refresh"></span>
+                <span>换一换</span>
+              </button>
+              <button class="area-header-button">
+                <span>更多</span>
+                <span class="area-header-button-icon-goto"></span>
+              </button>
+            </div>
+          </div>
+          <div class="video-card-list-content">
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+            <div class="video-card-list-item">
+              <img src="img/homepage_1.webp" alt="" />
+              <div class="video-card-list-item-title">视频标题</div>
+              <div class="video-card-list-item-info">视频信息</div>
+            </div>
+          </div>
+        </div>
+        <aside class="ranking-list">
+          <div class="area-header">
+            <div class="left">排行榜</div>
+            <div class="right">
+              <button class="area-header-button">
+                <span>更多</span>
+                <span class="area-header-button-icon-goto"></span>
+              </button>
+            </div>
+          </div>
+          <div class="ranking-list-content">
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+            <div class="ranking-list-item">震惊!</div>
+          </div>
+        </aside>
+      </section>
     </main>
 
     <div class="side-bar"></div>

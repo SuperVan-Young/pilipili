@@ -1,0 +1,82 @@
+/* 主页部分整体布局，各大区块基本设置 */
+@font-face {
+  font-family: bilifont;
+  src: url(../iconfont.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-layout {
+  width: 86%;
+
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+/* 长条的广告 */
+.advertisement {
+  margin-bottom: 32px;
+}
+
+.advertisement img {
+  width: 100%;
+}
+
+/* 通用分区grid，内部元素需要占据合适的span
+*/
+.main-grid {
+  display: grid;
+  column-gap: 12px;
+  margin-bottom: 56px;
+
+  /* TODO: 响应式 */
+  grid-column: 5;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* 通用的header，标题和按钮分居两侧 */
+.area-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+  height: 34px;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.area-header .left {
+}
+
+.area-header .right {
+}
+
+.area-header-button {
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 6px;
+  height: 34px;
+
+  font-size: 14px;
+}
+
+/* 向右的箭头 */
+.area-header-button-icon-goto {
+  font-family: bilifont;
+  vertical-align: middle;
+}
+
+.area-header-button-icon-goto::before {
+  content: "\E73B";
+}
+
+/* 刷新 */
+.area-header-button-icon-refresh {
+  font-family: bilifont;
+  vertical-align: middle;
+}
+
+.area-header-button-icon-refresh::before {
+  content: "\E73C";
+}

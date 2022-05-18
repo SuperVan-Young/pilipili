@@ -6,12 +6,6 @@ nav {
     min-width: 1000px;
 }
 
-.nav-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 .nav-wrapper a:link, .nav-wrapper a:hover, .nav-wrapper a:visited {
     color: black;
     text-decoration: none;
@@ -19,6 +13,86 @@ nav {
 
 .left-nav table {
     border-spacing: 30px 10px;
+    text-align: center;
+}
+.left-nav span {
+    font-size: 14px;
+    text-align: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: bilifont;
+}
+
+.shouye-bg {
+    background-color: #ff5c7c;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.shouye {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 28px;
+    vertical-align: middle;
+    color: white;
+}
+.shouye::before {
+    content: "\E738";
+}
+.dongtai-bg {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 5px;
+}
+.dongtai {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+.remen-bg {
+    background-color: #ff716d;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.remen {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 28px;
+    vertical-align: middle;
+    color: white;
+}
+.remen::before {
+    content: "\E743";
+}
+.pindao-bg {
+    background-color: #6dc781;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.pindao {
+    font-family: bilifont;
+    font-style: normal;
+    font-size: 28px;
+    vertical-align: middle;
+    color: white;
+}
+.pindao::before {
+    content: "\E760";
 }
 
 .center-nav table {

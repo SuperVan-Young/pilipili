@@ -6,6 +6,7 @@ footer > div {
   margin: 0 auto;
   padding: 40px 0 80px 0;
   width: 1600px;
+
 }
 
 .footer-top a:link,
@@ -19,10 +20,11 @@ footer > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100px;
 }
 
 div.split-line {
-  height: 200px;
+  height: 150px;
   width: 1px;
   background-color: #eeeeee;
 }
@@ -87,4 +89,52 @@ th p {
 }
 .official-wechat:before {
   content: "\E751";
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+div.footer-image {
+  margin: 0;
+}
+.footer-image {
+  display: flex;
+  flex-direction: column;
+}
+.footer-bottom ul {
+  font-size: 12px;
+  color: #999;
+}
+.footer-bottom ul {
+  font-size: 12px;
+  color: #999;
+}
+ul.footer-ul-1 > li {
+  margin-bottom: 10px;
+}
+ul.footer-ul-1 {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+ul.footer-ul-2 > li {
+  display: inline-block;
+}
+ul.footer-ul-3 > li {
+  display: inline-block;
+}
+ul.footer-ul-2 > li::before {
+  margin-right: 5px;
+}
+ul.footer-ul-3 > li::before {
+  content: "\ |\ ";
+}
+.footer-ul a:link, 
+.footer-ul a:hover, 
+.footer-ul a:visited {
+  color: #999;
+  text-decoration: none;
 }

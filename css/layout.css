@@ -13,6 +13,15 @@
   padding-right: 7%;
 }
 
+/* 长条的广告 */
+.advertisement {
+  margin-bottom: 32px;
+}
+
+.advertisement img {
+  width: 100%;
+}
+
 /* 通用分区grid，内部元素需要占据合适的span
 */
 .main-grid {

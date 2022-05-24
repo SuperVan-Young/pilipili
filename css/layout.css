@@ -1,17 +1,12 @@
 /* 主页部分整体布局，各大区块基本设置 */
-@font-face {
-  font-family: bilifont;
-  src: url(../iconfont.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
 .main-layout {
   width: 86%;
 
   padding-left: 7%;
   padding-right: 7%;
 }
+
+/* ********************************** */
 
 /* 长条的广告 */
 .advertisement {
@@ -22,17 +17,44 @@
   width: 100%;
 }
 
-/* 通用分区grid，内部元素需要占据合适的span
-*/
+/* ********************************** */
+
+/* 通用分区grid */
 .main-grid {
   display: grid;
   column-gap: 12px;
   margin-bottom: 56px;
 
   /* TODO: 响应式 */
-  grid-column: 5;
-  grid-template-columns: repeat(5, 1fr);
+  grid-column: 7;
+  grid-template-columns: repeat(7, 1fr);
 }
+
+/* 响应式 */
+@media screen and (max-width: 2200px) {
+  .main-grid {
+    grid-column: 6;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .main-grid {
+    grid-column: 5;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  
+  .main-grid {
+    grid-column: 4;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ********************************** */
 
 /* 通用的header，标题和按钮分居两侧 */
 .area-header {
@@ -46,11 +68,11 @@
   font-size: 24px;
 }
 
-.area-header .left {
-}
+/* .area-header .left {
+} */
 
-.area-header .right {
-}
+/* .area-header .right {
+} */
 
 .area-header-button {
   border-width: 1px;
@@ -59,6 +81,17 @@
   height: 34px;
 
   font-size: 14px;
+}
+
+/* ********************************** */
+
+/* 图标 */
+
+@font-face {
+  font-family: bilifont;
+  src: url(../iconfont.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* 向右的箭头 */
@@ -80,3 +113,5 @@
 .area-header-button-icon-refresh::before {
   content: "\E73C";
 }
+
+/* ********************************** */

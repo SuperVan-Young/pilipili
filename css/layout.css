@@ -1,6 +1,7 @@
 /* 主页部分整体布局，各大区块基本设置 */
 .main-layout {
   width: 86%;
+  min-width: 1100px;
 
   padding-left: 7%;
   padding-right: 7%;

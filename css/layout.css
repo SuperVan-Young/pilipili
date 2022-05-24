@@ -26,7 +26,6 @@
   column-gap: 12px;
   margin-bottom: 56px;
 
-  /* TODO: 响应式 */
   grid-column: 7;
   grid-template-columns: repeat(7, 1fr);
 }
@@ -72,6 +71,21 @@
 /* .area-header .left {
 } */
 
+.area-header .left:hover {
+  cursor: default;
+}
+
+.area-header .left a {
+  text-decoration: none;
+  color: black;
+
+  transition: color 0.5s;
+}
+
+.area-header .left a:hover {
+  color: #30c2dc;
+}
+
 /* .area-header .right {
 } */
 
@@ -95,24 +109,8 @@
   font-style: normal;
 }
 
-/* 向右的箭头 */
-.area-header-button-icon-goto {
+.pili-icon {
   font-family: bilifont;
-  vertical-align: middle;
-}
-
-.area-header-button-icon-goto::before {
-  content: "\E73B";
-}
-
-/* 刷新 */
-.area-header-button-icon-refresh {
-  font-family: bilifont;
-  vertical-align: middle;
-}
-
-.area-header-button-icon-refresh::before {
-  content: "\E73C";
 }
 
 /* ********************************** */

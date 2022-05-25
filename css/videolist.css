@@ -27,6 +27,26 @@
 
 /* ********************* */
 
+.video-card-list-item-title {
+  font-size: 15px;
+  color: #333333;
+}
+
+.video-card-list-item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+.video-card-list-item-info span:nth-child(n+2) {
+  margin-left: 4px;
+}
+
+/* ********************* */
+
 /* 响应式 */
 
 @media screen and (max-width: 2200px) {

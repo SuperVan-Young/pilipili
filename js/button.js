@@ -7,6 +7,14 @@ $(".area-header-button").mouseup(function () {
   $(this).css("transform", "scale(1)");
 });
 
+$(".area-header-button").mouseover(function() {
+  $(this).css("transition", "background-color 0.3s")
+  $(this).css("backgroundColor", "#eeeeee");
+  $(this).css("cursor", "pointer");
+});
+
 $(".area-header-button").mouseleave(function () {
+  $(this).css("transition", "background-color 0.3s")
+  $(this).css("backgroundColor", "#ffffff");
   $(this).css("transform", "scale(1)");
 });

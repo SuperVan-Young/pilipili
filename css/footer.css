@@ -1,12 +1,12 @@
 footer {
   background-color: #f6f9fa;
+  min-width: 1100px;
 }
 
 footer > div {
   margin: 0 auto;
   padding: 40px 0 80px 0;
-  width: 1600px;
-
+  min-width: 999px;
 }
 
 .footer-top a:link,
@@ -21,8 +21,12 @@ footer > div {
   flex-direction: row;
   justify-content: space-between;
   height: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
-
+.footer-top > div {
+  margin-left: 20px;
+}
 div.split-line {
   height: 150px;
   width: 1px;
@@ -42,7 +46,7 @@ div.split-line {
 td p {
   text-align: left;
   width: 150px;
-  margin-right: 50px;
+  margin-right: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
   margin-left: 0;
@@ -52,7 +56,7 @@ td p {
 th p {
   text-align: left;
   width: 150px;
-  margin-right: 50px;
+  margin-right: 20px;
   margin-top: 2px;
   margin-bottom: 10px;
   margin-left: 0;

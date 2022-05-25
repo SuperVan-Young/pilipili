@@ -6,9 +6,13 @@ nav {
     height: 100px;
 }
 
-.nav-wrapper a:link, .nav-wrapper a:hover, .nav-wrapper a:visited {
+.nav-wrapper a:link, .nav-wrapper a:visited {
     color: #61666c;
     text-decoration: none;
+}
+.nav-wrapper a:hover {
+    color: #7acce6;
+    transition: 0.5s;
 }
 
 .left-nav table {

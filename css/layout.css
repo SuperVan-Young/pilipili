@@ -1,10 +1,30 @@
-/* 主页部分整体布局，各大区块基本设置 */
-.main-layout {
-  width: 86%;
-  min-width: 1100px;
+/* 整个网页的wrapper，控制网页居中和整体缩放大小 */
+.main-frame {
+  margin: 0 auto;
+  max-width: 2560px;
+}
 
-  padding-left: 7%;
-  padding-right: 7%;
+/* 主页部分整体布局，主要控制左右padding */
+.main-layout {
+  min-width: 980px;
+
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+/* 响应式 */
+@media screen and (max-width: 1900px) {
+  .main-layout {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main-layout {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 
 /* ********************************** */
@@ -26,7 +46,6 @@
   column-gap: 12px;
   margin-bottom: 56px;
 
-  /* TODO: 响应式 */
   grid-column: 7;
   grid-template-columns: repeat(7, 1fr);
 }
@@ -47,13 +66,11 @@
 }
 
 @media screen and (max-width: 1100px) {
-  
   .main-grid {
     grid-column: 4;
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 
 /* ********************************** */
 
@@ -72,6 +89,20 @@
 /* .area-header .left {
 } */
 
+.area-header .left:hover {
+  cursor: default;
+}
+
+.area-header .left a {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  transition: color 0.5s;
+}
+
+.area-header .left a:hover {
+  color: #30c2dc;
+}
+
 /* .area-header .right {
 } */
 
@@ -81,7 +112,15 @@
   border-radius: 6px;
   height: 34px;
 
+  background-color: white;
+  transition: background-color 0.5s;
+
   font-size: 14px;
+}
+
+.area-header-button:hover {
+  cursor: pointer;
+  background-color: rgb(212, 212, 212);
 }
 
 /* ********************************** */
@@ -95,24 +134,8 @@
   font-style: normal;
 }
 
-/* 向右的箭头 */
-.area-header-button-icon-goto {
+.pili-icon {
   font-family: bilifont;
-  vertical-align: middle;
-}
-
-.area-header-button-icon-goto::before {
-  content: "\E73B";
-}
-
-/* 刷新 */
-.area-header-button-icon-refresh {
-  font-family: bilifont;
-  vertical-align: middle;
-}
-
-.area-header-button-icon-refresh::before {
-  content: "\E73C";
 }
 
 /* ********************************** */

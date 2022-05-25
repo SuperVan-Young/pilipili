@@ -108,19 +108,20 @@
 
 .area-header-button {
   border-width: 1px;
-  border-color: gray;
+  border-color: #eeeeee;
   border-radius: 6px;
   height: 34px;
 
   background-color: white;
   transition: background-color 0.5s;
-
+  
   font-size: 14px;
+  border-style: solid;
 }
 
 .area-header-button:hover {
   cursor: pointer;
-  background-color: rgb(212, 212, 212);
+  background-color: #eeeeee;
 }
 
 /* ********************************** */

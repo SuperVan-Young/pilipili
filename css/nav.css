@@ -6,7 +6,7 @@ nav {
 }
 
 .nav-wrapper a:link, .nav-wrapper a:hover, .nav-wrapper a:visited {
-    color: #61666d;
+    color: #61666c;
     text-decoration: none;
 }
 
@@ -97,6 +97,7 @@ nav {
 .center-nav table {
     border-spacing: 40px 10px;
     font-size: 13px;
+    color: #61666c;
 }
 
 @media screen and (max-width: 1400px) {
@@ -121,6 +122,8 @@ nav {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    fill: #61666c;
+    stroke: #61666c;
 }
 
 .center-nav span {

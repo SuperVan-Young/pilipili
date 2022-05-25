@@ -45,7 +45,7 @@ div.split-line {
 
 td p {
   text-align: left;
-  width: 150px;
+  width: 140px;
   margin-right: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -55,7 +55,7 @@ td p {
 }
 th p {
   text-align: left;
-  width: 150px;
+  width: 140px;
   margin-right: 20px;
   margin-top: 2px;
   margin-bottom: 10px;
@@ -71,6 +71,22 @@ th p {
   margin-left: 12px;
   margin-right: 12px;
   font-size: 14px;
+}
+@media screen and (max-width: 1400px) {
+  td p {
+      width: 100px;
+      margin-right: 10px;
+  }
+  th p {
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer-top li {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
 }
 .footer-top img {
   width: 50px;
@@ -107,6 +123,7 @@ div.footer-image {
 .footer-image {
   display: flex;
   flex-direction: column;
+  padding-left: 100px;
 }
 .footer-bottom ul {
   font-size: 12px;

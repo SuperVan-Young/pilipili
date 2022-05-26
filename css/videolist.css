@@ -56,11 +56,13 @@
 }
 
 .video-card-list-item-preview-scroll .left {
+  display: none;
   width: 0%;
   background-color: #cccccc;
 }
 
 .video-card-list-item-preview-scroll .right {
+  display: none;
   width: 100%;
   background-color: #666666;
 }

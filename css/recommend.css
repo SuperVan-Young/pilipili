@@ -12,17 +12,9 @@
 .recommend-swipe {
   grid-column-end: span 2;
   grid-row-end: span 2;
-}
-
-.recommend-swipe iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.recommend-swipe-kernel {
   overflow: hidden;
+  position: relative;
 }
-
 
 /* ******************************** */
 

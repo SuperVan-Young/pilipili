@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./css/recommend.css" />
     <link rel="stylesheet" href="./css/ranking.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="main-frame">
@@ -305,7 +309,19 @@
         <section class="main-grid">
           <div class="recommend-container">
             <div class="recommend-swipe">
-              <iframe src="html/recommend-swipe.html" frameborder="0"></iframe>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="video-card-list-item">
               <img src="img/homepage_1.webp" alt="" />
@@ -860,4 +876,21 @@
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/button.js"></script>
   <script src="js/link.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- initialize recommend swipe -->
+  <script>
+    var swiper = new Swiper(".recommend-swipe", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>

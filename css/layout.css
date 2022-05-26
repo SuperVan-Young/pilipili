@@ -31,10 +31,20 @@
 
 /* 长条的广告 */
 .advertisement {
+  position: relative;
   margin-bottom: 32px;
 }
 
 .advertisement img {
+  width: 100%;
+}
+
+.advertisement a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100%;
   width: 100%;
 }
 

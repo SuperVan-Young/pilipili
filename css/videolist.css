@@ -114,19 +114,20 @@
 /* ********************* */
 
 .video-card-list-item-title {
+  display: block;
+
   font-size: 15px;
   color: #333333;
   margin-bottom: 4px;
 
   overflow: hidden;
   text-overflow: ellipsis;
-
   line-height: 20px;
   height: 40px;
 }
 
 .video-card-list-item-info {
-  display: flex;
+  display: flex block;
   flex-direction: row;
   align-items: baseline;
 

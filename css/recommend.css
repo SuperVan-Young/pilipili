@@ -4,6 +4,7 @@
   width: 100%;
   display: grid;
   column-gap: 12px;
+  row-gap: 20px;
   grid-template-columns: repeat(7, 1fr);
   grid-column-end: span 7;
 }
@@ -11,7 +12,75 @@
 .recommend-swipe {
   grid-column-end: span 2;
   grid-row-end: span 2;
+  overflow: hidden;
+  position: relative;
 }
+
+.recommend-swipe-link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.recommend-swipe-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.recommend-swipe-mask {
+  position: absolute;
+  bottom: 10%;
+  left: 0px;
+  z-index: -1;
+
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+/* ******************************** */
+
+/* swiper控件，用自定义的 */
+.recommend-swipe-button-prev, .recommend-swipe-button-next {
+  position: absolute;
+  bottom: 17%;
+  z-index: 1;
+
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  color: #007aff;
+  transition: color 0.3s;
+}
+
+.recommend-swipe-button-prev:hover, .recommend-swipe-button-next:hover {
+  cursor: pointer;
+  color: #30c2dc;
+}
+
+.recommend-swipe-button-prev {
+  left: 10px;
+}
+
+.recommend-swipe-button-next {
+  right: 10px;
+}
+
+.recommend-swipe-button-prev::after {
+  font-family: bilifont;
+  content: '\E745'
+}
+
+.recommend-swipe-button-next::before {
+  font-family: bilifont;
+  content: '\E744'
+}
+
 
 /* ******************************** */
 
@@ -21,7 +90,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-column-end: span 6;
   }
-  .recommend-container .video-card-list-item:nth-child(n+10) {
+  .recommend-container .video-card-list-item:nth-child(n + 10) {
     display: none;
   }
 }
@@ -31,7 +100,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-end: span 5;
   }
-  .recommend-container .video-card-list-item:nth-child(n+8) {
+  .recommend-container .video-card-list-item:nth-child(n + 8) {
     display: none;
   }
 }
@@ -41,7 +110,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-end: span 4;
   }
-  .recommend-container .video-card-list-item:nth-child(n+6) {
+  .recommend-container .video-card-list-item:nth-child(n + 6) {
     display: none;
   }
 }

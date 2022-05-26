@@ -31,10 +31,20 @@
 
 /* 长条的广告 */
 .advertisement {
+  position: relative;
   margin-bottom: 32px;
 }
 
 .advertisement img {
+  width: 100%;
+}
+
+.advertisement a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100%;
   width: 100%;
 }
 
@@ -86,21 +96,12 @@
   font-size: 24px;
 }
 
-/* .area-header .left {
-} */
+.area-header .left a {
+  color: rgb(100, 100, 100);
+}
 
 .area-header .left:hover {
   cursor: default;
-}
-
-.area-header .left a {
-  text-decoration: none;
-  color: rgb(100, 100, 100);
-  transition: color 0.5s;
-}
-
-.area-header .left a:hover {
-  color: #30c2dc;
 }
 
 /* .area-header .right {
@@ -108,34 +109,14 @@
 
 .area-header-button {
   border-width: 1px;
-  border-color: gray;
+  border-color: #eeeeee;
   border-radius: 6px;
   height: 34px;
 
   background-color: white;
-  transition: background-color 0.5s;
 
   font-size: 14px;
-}
-
-.area-header-button:hover {
-  cursor: pointer;
-  background-color: rgb(212, 212, 212);
-}
-
-/* ********************************** */
-
-/* 图标 */
-
-@font-face {
-  font-family: bilifont;
-  src: url(../iconfont.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-.pili-icon {
-  font-family: bilifont;
+  border-style: solid;
 }
 
 /* ********************************** */

@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/videolist.css" />
     <link rel="stylesheet" href="./css/recommend.css" />
-    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/ranking.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -782,4 +787,25 @@
     </footer>
   </body>
   <script type="text/javascript" src="script/header.js"></script>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/button.js"></script>
+  <script src="js/link.js"></script>
+  <script src="js/video.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- initialize recommend swipe -->
+  <script>
+    var swiper = new Swiper(".recommend-swipe", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".recommend-swipe-button-next",
+        prevEl: ".recommend-swipe-button-prev",
+      },
+    });
+  </script>
 </html>

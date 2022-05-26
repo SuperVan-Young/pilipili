@@ -1,0 +1,21 @@
+/* ********************************** */
+
+/* 图标 */
+
+@font-face {
+  font-family: bilifont;
+  src: url(../iconfont.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pili-icon {
+  font-family: bilifont;
+}
+
+/* ********************************** */
+
+/* 链接 */
+.pili-link {
+  text-decoration: none;
+}

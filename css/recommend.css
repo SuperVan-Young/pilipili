@@ -16,6 +16,35 @@
   position: relative;
 }
 
+.recommend-swipe-link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.recommend-swipe-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.recommend-swipe-mask {
+  position: absolute;
+  bottom: 10%;
+  left: 0px;
+  z-index: -1;
+
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+/* ******************************** */
+
 /* ******************************** */
 
 /* 响应式 */
@@ -24,7 +53,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-column-end: span 6;
   }
-  .recommend-container .video-card-list-item:nth-child(n+10) {
+  .recommend-container .video-card-list-item:nth-child(n + 10) {
     display: none;
   }
 }
@@ -34,7 +63,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-end: span 5;
   }
-  .recommend-container .video-card-list-item:nth-child(n+8) {
+  .recommend-container .video-card-list-item:nth-child(n + 8) {
     display: none;
   }
 }
@@ -44,7 +73,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-end: span 4;
   }
-  .recommend-container .video-card-list-item:nth-child(n+6) {
+  .recommend-container .video-card-list-item:nth-child(n + 6) {
     display: none;
   }
 }

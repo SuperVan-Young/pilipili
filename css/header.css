@@ -74,7 +74,7 @@ header {
   margin-left: 30px;
   height: 100%;
 }
-.left-header li {
+.left-header li, .right-header li {
   position: relative;
 }
 .left-header svg {
@@ -215,16 +215,18 @@ header {
 }
 
 .right-header {
+  margin-left: 40px;
   margin-right: 30px;
   height: 100%;
 }
 .right-header img {
+  position: inherit;
+  z-index: 100;
   vertical-align: middle;
   display: inline-block;
   width: 40px;
   border-radius: 100%;
 }
-
 .header-content img {
   position: relative;
   top: 0px;
@@ -526,4 +528,108 @@ header {
   margin-bottom: 5px;
   height: 25px;
   text-align: left;
+}
+
+.user-hover-div {
+  z-index: 101;
+  position: absolute;
+  top: 40px;
+  left: -125px;
+  width: 300px;
+  height: 521px;
+  border-color: #e2e5e7;
+}
+.user-bg {
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 260px;
+  height: 481px;
+  top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid;
+  border-color: #e2e5e7;
+  border-right: none;
+}
+.user-top {
+  display: flex;
+  flex-direction: column;
+}
+.user-name {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 2px;
+  line-height: 22px;
+  margin: 1px;
+}
+.user-huiyuan {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  width: 69px;
+  line-height: 15px;
+  background-color: #fb7299;
+  border-radius: 4px;
+  color: white;
+  margin: 0px;
+
+}
+.user-top img {
+  position: relative;
+}
+.user-level {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  color: #c9ccd0;
+}
+.user-info-top {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 22px;
+  line-height: 22px;
+  margin: 0px;
+  padding: 0px;
+  width: 29px;
+}
+.user-count ul {
+  text-decoration: none;
+  margin: 0 auto;
+  margin-left: 20px;
+  padding: 0px;
+}
+.user-count li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.user-info-bottom {
+  color: #c9ccd0;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  height: 15px;
+  line-height: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.user-info-bottom:hover {
+  color: #7acce6;
+  transition: 0.5s;
+}
+.user-count a:hover {
+  color: #7acce6;
+  transition: 0.5s;
+}
+.user-bottom li {
+  display: block;
 }

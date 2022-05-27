@@ -527,3 +527,42 @@ header {
   height: 25px;
   text-align: left;
 }
+
+.manhua-hover-div {
+  z-index: 4;
+  position: absolute;
+  top: 40px;
+  left: -150px;
+  width: 387px;
+  height: 236px;
+  border-color: #e2e5e7;
+}
+.xiazai-top {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 60px;
+  left: -150px;
+  width: 347px;
+  height: 162px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: white;
+  border: 1px solid;
+  border-color: #e2e5e7;
+  border-bottom: none;
+}
+
+.dhy-hover-div {
+  z-index: 4;
+  position: absolute;
+  top: 40px;
+  left: -105px;
+  width: 300px;
+  height: 521px;
+  border-color: #e2e5e7;
+}

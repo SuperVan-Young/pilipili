@@ -165,7 +165,7 @@ header {
   content: "\E72C";
 }
 .search-history {
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   /* height: 200px; */
   position: absolute;

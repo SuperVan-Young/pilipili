@@ -632,4 +632,58 @@ header {
 }
 .user-bottom li {
   display: block;
+  border-radius: 5px;
+  height: 38px;
+  width: 252px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+  cursor: pointer;  
+}
+.user-bottom li:hover {
+  background-color: #e2e5e7;
+  transition: 0.3s;
+}
+.user-bottom a {
+  display: inline-block;
+  height: 100%;
+  width: 252px;
+  margin: 10px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+}
+.user-bottom svg {
+  display: inline-block;
+  width: 18px;
+  vertical-align: middle;
+  fill: #61666d;
+  stroke: #61666d;
+  margin: 0px;
+  padding: 0px;
+}
+.user-bottom p {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 17px;
+  height: 17px;
+  color: black;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  color: #61666d;
+}
+.user-bottom span {
+  display: inline-block;
+  font-size: 14px;
+  height: 17px;
+  line-height: 17px;
+  margin: 0px;
+  padding: 0px;
+  color: #61666d;
+  vertical-align: middle;
 }

@@ -6,7 +6,7 @@ $(".video-card-list-item-preview").mouseover(function() {
 
     var video = $(this).children("video")[0];
     video.currentTime = 0;
-    video.play();
+    // video.play();
     $(this).children("video").fadeIn(300);
 });
 

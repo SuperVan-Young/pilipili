@@ -59,7 +59,7 @@ header {
   vertical-align: middle;
   text-align: center;
 }
-.header-wrapper li:first-child {
+.first-li {
   margin-left: -5px;
 }
 
@@ -165,7 +165,7 @@ header {
   content: "\E72C";
 }
 .search-history {
-  z-index: 3;
+  z-index: 101;
   width: 100%;
   /* height: 200px; */
   position: absolute;
@@ -186,25 +186,48 @@ header {
   display: block;
 }
 .history-div {
-  height: 30px;
+  height: 50px;
   width: 100%;
 }
 .history-title {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
   float: left;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 5px;
 }
 .history-clear {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
   float: right;
+  color: #b4b8bc;
+  line-height: 15px;
+  font-size: 12px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 .hot-list {
   display: flex;
 	flex-direction: row;
   justify-content: space-between;
 }
+.hot-list p {
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a6aaaf;
+}
+p.hot-item {
+  color: #18191c;
+}
 .hot-list ul {
   display: inline-block;
-  width: calc(50%-5px);
+  width: calc(50%-15px);
   list-style-type: none;
-  background-color: #999;
+  margin: 0px;
+  padding: 0px;
 }
 .hot-list li {
   display: block;
@@ -212,16 +235,23 @@ header {
   width: 200px;
   margin: 0px;
   padding: 0px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14;
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+}
+.hot-list li:hover {
+  background-color: #e2e5e7;
 }
 
 .right-header {
-  margin-left: 40px;
+  margin-left: 0px;
   margin-right: 30px;
   height: 100%;
 }
 .right-header img {
   position: inherit;
-  z-index: 100;
+  z-index: 102;
   vertical-align: middle;
   display: inline-block;
   width: 40px;
@@ -254,7 +284,7 @@ header {
 }
 
 .zhibo-hover-div {
-  z-index: 4;
+  z-index: 102;
   position: absolute;
   top: 40px;
   left: -150px;
@@ -345,13 +375,18 @@ header {
 }
 
 .youxi-hover-div {
-  z-index: 4;
+  z-index: 102;
   position: absolute;
   top: 40px;
   left: -100px;
   width: 424px;
   height: 315px;
   border-color: #e2e5e7;
+}
+.youxi-hover-div a:hover {
+  color: #7acce6;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .youxi-left {
   display: flex;
@@ -375,6 +410,7 @@ header {
   width: 230px;
   height: 129px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .youxi-left-top {
   margin-bottom: 10px;
@@ -386,6 +422,8 @@ header {
   width: 66px;
   height: 66px;
   border-radius: 15px;
+  margin: 0px;
+  padding: 0px;
 }
 .youxi-left-bottom li {
   padding: 0px;
@@ -394,8 +432,12 @@ header {
 .youxi-left-bottom p {
   font-size: 13px;
   line-height: 17px;
+  height: 17px;
+  margin: 0px;
+  padding: 0px;
   text-align: left;
   color: black;
+  width: 66px;
 }
 .youxi-right {
   position: absolute;
@@ -442,13 +484,18 @@ header {
 }
 
 .manhua-hover-div {
-  z-index: 4;
+  z-index: 102;
   position: absolute;
   top: 40px;
   left: -100px;
   width: 505px;
   height: 280px;
   border-color: #e2e5e7;
+}
+.manhua-hover-div a:hover {
+  color: #7acce6;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .manhua-left {
   display: flex;
@@ -603,9 +650,9 @@ header {
   width: 29px;
 }
 .user-count ul {
-  text-decoration: none;
+  /* text-decoration: none; */
   margin: 0 auto;
-  margin-left: 20px;
+  justify-content: space-around;
   padding: 0px;
 }
 .user-count li {
@@ -649,22 +696,20 @@ header {
   height: 100%;
   width: 252px;
   margin: 10px;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
 }
 .user-bottom svg {
-  display: inline-block;
+  /* display: ; */
   width: 18px;
   vertical-align: middle;
   fill: #61666d;
   stroke: #61666d;
-  margin: 0px;
+  margin-right: 10px;
   padding: 0px;
+  float: left;
 }
 .user-bottom p {
   font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: middle;
   font-size: 14px;
   line-height: 17px;
@@ -676,9 +721,10 @@ header {
   margin-left: 0px;
   padding: 0px;
   color: #61666d;
+  float: left;
 }
 .user-bottom span {
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 14px;
   height: 17px;
   line-height: 17px;
@@ -686,4 +732,52 @@ header {
   padding: 0px;
   color: #61666d;
   vertical-align: middle;
+  float: right;
+  margin-right: 10px;
+}
+li.log-out {
+  margin-top: 10px;
+}
+
+.xiaoxi-hover-div {
+  z-index: 102;
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 142px;
+  height: 249px;
+  border-color: #e2e5e7;
+}
+.xiaoxi-bg {
+  z-index: 102;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 142px;
+  height: 189px;
+  top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid;
+  border-color: #e2e5e7;
+  border-right: none;
+}
+.xiaoxi-bg ul {
+  width: auto;
+  margin: 0 auto;
+}
+.xiaoxi-bg li {
+  display: block;
+  height: 37px;
+  width: 122px;
+  text-align: left;
+  cursor: pointer;  
+  font-family: PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+  font-size: 14px;
+}
+.xiaoxi-bg li:hover {
+  background-color: #e2e5e7;
+  transition: 0.3s;
 }

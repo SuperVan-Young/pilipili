@@ -1,0 +1,301 @@
+@media screen and (max-width: 850px) {
+    .main {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .uper-wrap {
+        display: none;
+    }
+
+    .danmaku-wrap {
+        display: none;
+    }
+
+    #AD {
+        display: none;
+    }
+    
+
+    .split-line {
+        display: none;
+    }
+
+    .video-list-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 320px;
+    }
+
+    .video-wrap {
+        width: 50%;
+        display: inline-block;
+        min-width: 160px;
+    }
+
+    .video-img {
+        margin-left: 15px;
+        width: 160px;
+        min-width: 160px;
+        height: 100px;
+    }
+
+    .comment-wrap {
+
+        width: 90%;
+        margin: 0 5%;
+        margin-top: 20px;
+    }
+
+
+    .comment-head {
+        display: none;
+    }
+
+    .comment-choice-wrap {
+        display: none;
+    }
+
+    .my-comment-wrap {
+        display: none;
+    }
+
+    .my-comment-wrap-sub1 {
+        height: 30px;
+        position: relative;
+    }
+
+    .user-face a img {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .txt {
+        width: 60%;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .comment-submit {
+        height: 30px;
+        padding: 0;
+    }
+
+    .switch-on-phone {
+        width: 100%;
+        border-top: 1px solid #e5e9ef;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        margin-bottom: 10px;
+
+    }
+
+    .switch {
+        cursor: pointer;
+        line-height: 20px;
+        height: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+
+    .choice-on-phone {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: -45px;
+        font-size: 14px;
+        color: #999;
+    }
+
+    .choice-on-phone::before {
+        font-family: bilifont2;
+        content: "\E665";
+    }
+
+    .video-title {
+        font-size: 18px;
+        font-weight: 320px;
+        color: #212121;
+        line-height: 26px;
+        height: 26px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .activity {
+        transition: none;
+        display: inline-block;
+        vertical-align: text-bottom;
+        font-size: 12px;
+        margin-right: 10px;
+        padding: 0 5px;
+        height: 22px;
+        line-height: 22px;
+        border-radius: 2px;
+        color: #fff;
+        background-color: #ffafc9;
+        vertical-align: middle;
+    }
+
+    .smallIntro {
+        height: 16px;
+        color: #999;
+        align-items: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 16px;
+    }
+
+    #bilibili-player {
+        width: 100%;
+        height: 450px;
+    }
+
+    .bilibili-player-danmu {
+        position: relative;
+        display: block;
+    }
+
+    #bilibili-viedo {
+        width: 100%;
+    }
+
+    #player-underline {
+        justify-content: space-between;
+        box-sizing: content-box;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 13px;
+        border: #E3E5E7;
+    }
+
+    .player-underline-bolder {
+        font-weight: bolder;
+    }
+
+    #danmu_inf {
+        float: left;
+        display: none;
+    }
+
+    #danmu_div {
+        float: right;
+        align-items: center;
+        display: flex;
+    }
+
+    .danmu_button {
+        background-color: #00a1d6;
+        color: #fff;
+    }
+
+    #bottom_line {
+        box-sizing: content-box;
+        border: 2px solid blue;
+        box-shadow: 1px 1px 1px rgb(0, 229, 255);
+        padding-top: 16px;
+        padding-bottom: 12px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    #bottom_right {
+        position: relative;
+        float: right;
+        align-items: center;
+        color: #61666D;
+        font-size: 6px;
+        display: none;
+    }
+
+    #bottom_left {
+        float: left;
+        position: relative;
+        font-size: 6px;
+        color: #61666D;
+        color: var(--text2);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .bottom_inf_left,
+    .bottom_inf_right {
+        width: 80px;
+    }
+
+    .complain {
+        text-decoration: none;
+    }
+
+    .complain:hover {
+        color: #00a1d6;
+    }
+
+
+    #intro {
+        white-space: pre-line;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    #intro_button {
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: lighter;
+        line-height: 18px;
+    }
+
+    .vote {
+        border-radius: 6px;
+        border: 1px solid blue;
+        height: 100px;
+        display: none;
+    }
+
+    .vote_left {
+        float: left;
+        font-size: 14px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #18191C;
+        display: none;
+    }
+
+    .vote_right {
+        float: right;
+        position: relative;
+        display: none;
+    }
+
+    .text {
+        position: absolute;
+    }
+
+
+}

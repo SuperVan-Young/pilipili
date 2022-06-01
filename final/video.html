@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/comment.css">
+    <link rel="stylesheet" href="./css/right-part.css">
+
+    <link rel="stylesheet" href="./css/player.css">
+    <link rel="stylesheet" href="./css/response.css">
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.19.2/video-js.css">
+
+    <script src="./js/jquery.js"></script>
+
+</head>
+
+<body style="margin: 0;">
+    <div class="title" style="min-height: 60px;">
+
+    </div>
+    <div class="main">
+        <div class="left-content">
+            <div style="width: 100%;">
+                <div id="viewbox_report">
+                    <h1 title="这是标题" class="video-title"><a target="_blank" class="activity">活动作品</a><span
+                            class="tit tr-fix">这是一串看起来很长而且废话十分得多但是实际上只是为了凸显出截取效果这个功能而起的标题</span></h1>
+                    <div class="video-data"><span title="总播放数30293" class="smallIntro">114.514万播放 · </span><span
+                            title="历史累计弹幕数1919" class="smallIntro">总弹幕数1919</span><span class="smallIntro">2022-08-10
+                            11:45:14</span>
+                    </div>
+                </div>
+                <div id="playerWrap">
+                    <div id="bilibili-player">
+                        <div class="bilibili-player-danmu">
+                            <video id="bilibili-viedo" class="video-js" controls controls preload="auto"
+                                data-setup="{}">
+                                <source src="./1.mp4" type="video/mp4">
+                                </source>
+                            </video>
+                            <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+                        </div>
+                    </div>
+                    <div id="player-underline">
+                        <div id="danmu_inf">
+                            <span class="player-underline-bolder">11</span>
+                            <span>人正在观看，</span>
+                            <span>已装填</span>
+                            <span id="danmu_number" class="player-underline-bolder">182</span>
+                            <span>条弹幕</span>
+                        </div>
+                        <div id="danmu_div">
+                            <div style="display: inline;">
+                                <span id="danmu_switch" title="开启弹幕">
+                                    <img id="danmu_switch_button" src="./imgs/danmu_opened.png"
+                                        style="width:20px;height:20px;"></span>
+                            </div>
+                            <div style=" display: inline;">
+                                <input class="danmu_input" placeholder="发个弹幕见证当下">
+                                <button class="danmu_button">发送</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="bottom_line">
+                    <div id="bottom_left">
+                        <div title="点赞数2174" class="bottom_inf_left">
+                            <p class="bilifont bili-icon_shipin_dianzanshu" id="dianzan">2174</p>
+                        </div>
+                        <div title="投硬币枚数1118" class="bottom_inf_left">
+                            <i class="bilifont bili-icon_shipin_yingbishu" id="toubi">1118</i>
+                        </div>
+                        <div title="收藏人数451" class="bottom_inf_left">
+                            <i class="bilifont bili-icon_shipin_shoucangshu" id="shoucang">451</i>
+                        </div>
+                        <div title="分享" class="bottom_inf_left">
+                            <i class="bilifont bili-icon_caozuo_xiangyou" id="fenxiang">111</i>
+                        </div>
+                    </div>
+                    <script>
+                        var dianzan_ele = document.getElementById("dianzan");
+                        var toubi_ele = document.getElementById("toubi");
+                        var shoucang_ele = document.getElementById("shoucang");
+                        var fenxiang_ele = document.getElementById("fenxiang");
+                        var if_dianzan = 0;
+                        var if_toubi = 0;
+                        var if_shoucang = 0;
+                        var if_fenxiang = 0;
+                        var timeLongtouch;
+                        dianzan_ele.onmousedown = function () {
+                            timeLongtouch = setTimeout("longpress()", 500);
+                            return false;
+                        }
+                        dianzan_ele.onmouseup = function () {
+                            clearTimeout(timeLongtouch);
+                            if (timeLongtouch != 0) {
+                                if (if_dianzan == 0) {
+                                    dianzan_ele.innerHTML = '2175';
+                                    dianzan_ele.style.color = 'Blue';
+                                    if_dianzan = 1;
+                                }
+                                else {
+                                    dianzan_ele.innerHTML = '2174';
+                                    dianzan_ele.style.color = 'Black';
+                                    if_dianzan = 0;
+                                }
+                            }
+                            else {
+                                dianzan_ele.style.fontSize = "16px";
+                                shoucang_ele.style.fontSize = "16px";
+                                toubi_ele.style.fontSize = "16px";
+                                dianzan_ele.innerHTML = '2175';
+                                shoucang_ele.innerHTML = '452';
+                                toubi_ele.innerHTML = '1119';
+                            }
+                            return false;
+                        }
+                        function longpress() {
+                            timeLongtouch = 0;
+                            if (if_dianzan == 0) {
+                                if_dianzan = 1; if_shoucang = 1; if_toubi = 1;
+                                dianzan_ele.style.fontSize = "22px";
+                                dianzan_ele.style.color = "Blue";
+                                shoucang_ele.style.fontSize = "22px";
+                                shoucang_ele.style.color = "Blue";
+                                toubi_ele.style.fontSize = "22px";
+                                toubi_ele.style.color = "Blue";
+                            }
+                        }
+                        toubi_ele.onclick = function () {
+                            if (if_toubi == 0) {
+                                toubi_ele.innerHTML = '1119';
+                                toubi_ele.style.color = 'Blue';
+                                if_toubi = 1;
+                            }
+                        }
+                        shoucang_ele.onclick = function () {
+                            if (if_shoucang == 0) {
+                                shoucang_ele.innerHTML = '452';
+                                shoucang_ele.style.color = 'Blue';
+                                if_shoucang = 1;
+                            }
+                            else {
+                                shoucang_ele.innerHTML = '451';
+                                shoucang_ele.style.color = 'Black';
+                                if_shoucang = 0;
+                            }
+                        }
+                        fenxiang_ele.onclick = function () {
+                            if (if_fenxiang == 0) {
+                                fenxiang_ele.innerHTML = '112';
+                                fenxiang_ele.style.color = 'Blue';
+                                if_fenxiang = 1;
+                            }
+                            else {
+                                fenxiang_ele.innerHTML = '111';
+                                fenxiang_ele.style.color = 'Black';
+                                if_fenxiang = 0;
+                            }
+                        }
+
+                    </script>
+                    <div id="bottom_right">
+                        <div class="bottom_inf_right">
+                            <a class="complain" href="https://www.bilibili.com/v/copyright/intro/">稿件投诉</a>
+                        </div>
+                        <div class="bottom_inf_right">
+                            记笔记
+                        </div>
+                    </div>
+                </div>
+                <HR style="FILTER:alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+                <div>
+                    <div id="intro">
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                        这是简介
+                    </div>
+                    <div>
+                        <p id="intro_button">展开</p>
+                    </div>
+                    <script>
+                        var if_shouqi = 0;
+                        document.getElementById("intro_button").onclick = function () {
+                            if (if_shouqi == 0) {
+                                if_shouqi = 1;
+                                document.getElementById("intro_button").innerHTML = "收起";
+                                document.getElementById("intro").style.display = "block";
+                            }
+                            else {
+                                if_shouqi = 0;
+                                document.getElementById("intro_button").innerHTML = "展开";
+                                document.getElementById("intro").style.display = "-webkit-box";
+                            }
+                        }
+                    </script>
+                </div>
+                <div>
+                    <div class="vote">
+                        <div class="vote_left">
+                            <div><b>音乐全品类投稿+直播双赛道！瓜分万元奖金！</b></div>
+                        </div>
+
+                        <div class="vote_right"><a target="_blank"
+                                href="https://www.bilibili.com/blackboard/activity-summer-pc.html"
+                                title="音乐全品类投稿+直播双赛道！瓜分万元奖金！">
+                                <img src="./imgs/vote.jpg" alt="" style="width: 320px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/danmaku.js"></script>
+            <div class="comment-wrap">
+                <div class="switch-on-phone">
+                    <div class="switch on">相关推荐</div>
+                    <div class="switch">9999&nbsp;评论</div>
+                </div>
+
+
+                <div class="comment-head">9999&nbsp;评论</div>
+                <div class="comment-choice-wrap">
+                    <div class="choice on">按热度排序</div>
+                    <div class="choice">按时间排序</div>
+                </div>
+                <div class="my-comment-wrap">
+                    <div class="my-comment-wrap-sub1">
+                        <div class="user-face">
+                            <a href="">
+                                <img src="./imgs/user.webp" alt="">
+                            </a>
+                        </div>
+
+                        <div class="my-text-wrap">
+                            <textarea cols="80" name="msg" rows="5" placeholder="发一条友善的评论" class="txt"></textarea>
+                        </div>
+                        <button class="comment-submit">发表评论</button>
+                        <div class="choice-on-phone">按热度</div>
+                    </div>
+
+                    <div class="comment-list-wrap">
+
+                        <div class="one-comment">
+                            <div class="other-face">
+                                <a href="">
+                                    <img src="./imgs/other.webp" alt=""
+                                        style="width: 48px;height:48px; border-radius: 50%;position: absolute;top: 20px;">
+                                </a>
+                            </div>
+                            <div class="other-comment-wrap">
+                                <div class="other-info">
+                                    <a href=""> <span class="other-id">IDIDIDID</span></a>
+                                    <a href=""> <span class="other-level"></span></a>
+                                </div>
+                                <div class="other-text">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+
+                                <div class="other-comment-info">
+                                    <span class="comment-time">2小时前</span>
+                                    <span class="yes"></span>
+                                    <span class="yes-num">66</span>
+                                    <span class="no"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one-comment">
+                            <div class="other-face">
+                                <a href="">
+                                    <img src="./imgs/other.webp" alt=""
+                                        style="width: 48px;height:48px; border-radius: 50%;position: absolute;top: 20px;">
+                                </a>
+                            </div>
+                            <div class="other-comment-wrap">
+                                <div class="other-info">
+                                    <a href=""> <span class="other-id">IDIDIDID</span></a>
+                                    <a href=""> <span class="other-level"></span></a>
+                                </div>
+                                <div class="other-text">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+
+                                <div class="other-comment-info">
+                                    <span class="comment-time">3小时前</span>
+                                    <span class="yes"></span>
+                                    <span class="yes-num">30</span>
+                                    <span class="no"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one-comment">
+                            <div class="other-face">
+                                <a href="">
+                                    <img src="./imgs/other.webp" alt=""
+                                        style="width: 48px;height:48px; border-radius: 50%;position: absolute;top: 20px;">
+                                </a>
+                            </div>
+                            <div class="other-comment-wrap">
+                                <div class="other-info">
+                                    <a href=""> <span class="other-id">IDIDIDID</span></a>
+                                    <a href=""> <span class="other-level"></span></a>
+                                </div>
+                                <div class="other-text">
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                                </div>
+
+                                <div class="other-comment-info">
+                                    <span class="comment-time">10分钟前</span>
+                                    <span class="yes"></span>
+                                    <span class="yes-num">0</span>
+                                    <span class="no"></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+
+
+                        </script>
+                    </div>
+
+                    <script src="./js/comment.js"></script>
+
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="uper-wrap">
+                <div class="uper-pic clearfix">
+                    <a href="">
+                        <img src="./imgs/up.webp" alt="" style="width: 48px;height:48px; border-radius: 50%;">
+                    </a>
+
+                    <div class="uper-card">
+                        <div class="card-bg"></div>
+                        <div class="card-wrap clearfix">
+                            <div class="card-pic">
+                                <a href="">
+                                    <img src="./imgs/up.webp" alt=""
+                                        style="width: 48px;height:48px; border-radius: 50%;">
+                                </a>
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info1">
+                                    <a href="" class="card-name">名字名字名字</a>
+                                </div>
+                                <div class="card-info2">
+                                    <div class="card-subinfo">
+                                        <span>200万</span>
+                                        <span style="color: #999;">粉丝</span>
+                                    </div>
+                                    <div class="card-subinfo">
+                                        <span>200万</span>
+                                        <span style="color: #999;">获赞</span>
+                                    </div>
+                                </div>
+                                <div class="card-info3">
+                                    这是签名这是签名这是签名 这是签名这是签名这是签名 这是签名这是签名这是签名
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <script>
+                        $(".uper-pic")
+                            .on("mouseover", function () {
+                                $(".uper-pic").css("height", "");
+                                $(".uper-card").show();
+                            }).on("mouseout", function () {
+                                $(".uper-pic").css("height", "48px");
+                                $(".uper-card").hide();
+                            });
+                    </script>
+                </div>
+                <div class="uper-info clearfix">
+                    <div class="info1">
+                        <a href="" class="name">名字名字名字</a>
+                        <a href="" class="message" id="sendUpMsg">
+                            <span class="icon"></span>
+                            发消息
+                        </a>
+                    </div>
+                    <div class="info2">
+                        这是签名这是签名这是签名 这是签名这是签名这是签名 这是签名这是签名这是签名
+                    </div>
+                    <div class="info3">
+                        <div class="charge charge-1" id="charge">
+                            <span>为TA充电</span>
+                        </div>
+                        <div class="subscribe-b" id="subscribe">
+                            <span>+&nbsp;关注&nbsp;</span>
+                            <span>200万</span>
+                        </div>
+                        <script>
+                            $("#subscribe").on("click", function () {
+                                if ($(this).attr("class") == "subscribe-b") {
+                                    $(this).removeClass("subscribe-b").addClass("subscribe-g");
+                                    $(this).children(":first").html("=&nbsp;已关注&nbsp;")
+                                    $("#charge").removeClass("charge-1").addClass("charge-2");
+                                }
+                                else if ($(this).attr("class") == "subscribe-g") {
+                                    $(this).removeClass("subscribe-g").addClass("subscribe-b");
+                                    $(this).children(":first").html("+&nbsp;关注&nbsp;")
+                                    $("#charge").removeClass("charge-2").addClass("charge-1");
+                                }
+                                else {
+                                    throw error;
+                                }
+                            });
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="danmaku-wrap">
+                <div class="danmaku-head">
+                    <div class="d-head1">
+                        <span>弹幕列表</span>
+                    </div>
+                    <div class="d-head2">
+                        <span id="d-head2-btn">展开</span>
+                    </div>
+                </div>
+                <div class="danmaku-list-div" style="display:none">
+                    <ul>
+                        <li class="clearfix" style="color: #6d757a; margin-bottom: 16px;">
+                            <span class="d-time"> 时间</span>
+                            <span class="d-content"> 弹幕内容</span>
+                            <span class="d-sendtime"> 发送时间</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:01</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:02</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:03</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:04</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:05</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="d-time">00:06</span>
+                            <span class="d-content">狗头狗头狗头</span>
+                            <span class="d-sendtime">05-04 20:08</span>
+                        </li>
+                    </ul>
+
+                    <div class="danmaku-foot">
+                        <span>查看历史弹幕</span>
+                    </div>
+                </div>
+
+                <script>
+                    $(".danmaku-head").on("click", function () {
+                        $(".danmaku-list-div").slideToggle(200);
+                        if ($(".d-head2").children("span").text() == "展开")
+                            $(".d-head2").children("span").text("收起");
+                        else
+                            $(".d-head2").children("span").text("展开");
+                    });
+                </script>
+            </div>
+
+            <div id="AD" class="video-wrap clearfix" style="margin-top: 20px;">
+                <div class="AD-img">
+                    <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+                </div>
+
+                <div class="video-info">
+                    <a href="" class="r-video-title">
+                        广告位招租
+                    </a>
+                    <a href="" class="video-uper">
+
+                    </a>
+                    <div class="video-count">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-line"></div>
+
+            <div class="video-list-wrap">
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+                <div class="video-wrap clearfix">
+                    <div class="video-img">
+                        <video class="mini-video" src="1.mp4" muted></video>
+                        <div class="scroll-1"></div>
+                        <div class="scroll-2"></div>
+                        <a href=""><img src="./imgs/logo.png" alt="" style="width: 100%;height: 100%;"></a>
+
+                    </div>
+                    <div class="video-info">
+                        <a href="" class="r-video-title">
+                            离谱！韩国人选出翠神中单，五分钟后直接懵逼，只能叫四个队友过来一起防守！
+                        </a>
+                        <a href="" class="video-uper">
+                            名字名字名字
+                        </a>
+                        <div class="video-count">
+                            98.1万 播放&nbsp;·&nbsp;108 弹幕
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $(".video-img")
+                        .on("mousemove", function (e) {
+                            var h = $(this).height();
+                            var w = $(this).width();
+                            var start_h = $(this).offset().top;
+                            var start_w = $(this).offset().left;
+
+                            var per = (e.pageX - start_w) / w;
+
+                            if (per > 1)
+                                per = 1;
+                            if (per < 0)
+                                per = 0;
+
+                            $(this).children().eq(1).css("width", per * 120 + "px");
+                            $(this).children().eq(2).css("width", (1 - per) * 120 + "px");
+
+
+                            var video = $(this).children().eq(0)[0];
+                            video.currentTime = video.duration * per;
+                            // video.playbackRate = 5;
+                            // video.play();
+                            video.pause();
+
+                            $(this).children().eq(0).show();
+                            $(this).children().eq(1).show();
+                            $(this).children().eq(2).show();
+
+
+                        }).on("mouseout", function () {
+                            $(this).children().eq(0).hide();
+                            $(this).children().eq(1).hide();
+                            $(this).children().eq(2).hide();
+                            $(this).children().eq(0)[0].pause();
+                        });
+                </script>
+            </div>
+
+
+
+            <div class="menu">
+                <div class="totop"></div>
+            </div>
+            <script>
+                $(window).scroll(function () {
+                    var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
+                    if (scrollt > 100) {
+                        $(".totop").show();
+                    } else {
+                        $(".totop").hide();
+                    }
+                });
+                $(".totop")
+                    .on("click", function () {
+                        $("html,body").animate({ scrollTop: "0px" }, 300);
+                    });
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

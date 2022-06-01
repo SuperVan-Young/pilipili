@@ -1,0 +1,199 @@
+.bilifont {
+    font-family: bilifont !important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+
+.video-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #212121;
+    line-height: 26px;
+    height: 26px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.activity {
+    transition: none;
+    display: inline-block;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #ffafc9;
+    vertical-align: middle;
+}
+
+.smallIntro {
+    height: 16px;
+    color: #999;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 16px;
+}
+
+.bili-icon_shipin_shoucangshu:before {
+    content: "\E75A"
+}
+
+.bili-icon_shipin_yingbishu:before {
+    content: "\E75B";
+}
+
+.bili-icon_shipin_dianzanshu:before {
+    content: "\E740";
+}
+
+.bili-icon_caozuo_xiangyou:before {
+    content: "\E721";
+}
+
+#dianzan,
+#shoucang,
+#toubi {
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+#bilibili-player {
+    width: 100%;
+    max-height: 364px;
+    position: static;
+}
+
+.bilibili-player-danmu {
+    position: relative;
+    display: block;
+}
+
+#bilibili-viedo {
+    width: 100%;
+    max-height: 364px;
+}
+
+#player-underline {
+    justify-content: space-between;
+    box-sizing: content-box;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 13px;
+    border: #E3E5E7;
+}
+
+.player-underline-bolder {
+    font-weight: bolder;
+}
+
+#danmu_inf {
+    float: left;
+}
+
+#danmu_div {
+    float: right;
+    align-items: center;
+    display: flex;
+}
+
+.danmu_button {
+    background-color: #00a1d6;
+    color: #fff;
+}
+
+#bottom_line {
+    box-sizing: content-box;
+    border: 2px solid blue;
+    box-shadow: 1px 1px 1px rgb(0, 229, 255);
+    padding-top: 16px;
+    padding-bottom: 12px;
+    height: 28px;
+    line-height: 28px;
+}
+
+#bottom_right {
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    color: #61666D;
+    font-size: 13px;
+}
+
+#bottom_left {
+    float: left;
+    position: relative;
+    font-size: 13px;
+    color: #61666D;
+    color: var(--text2);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.bottom_inf_left,
+.bottom_inf_right {
+    width: 80px;
+}
+
+.complain {
+    text-decoration: none;
+}
+
+.complain:hover {
+    color: #00a1d6;
+}
+
+
+#intro {
+    white-space: pre-line;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#intro_button {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: lighter;
+    line-height: 18px;
+}
+
+.vote {
+    border-radius: 6px;
+    border: 1px solid blue;
+    height: 100px;
+}
+
+.vote_left {
+    float: left;
+    font-size: 14px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #18191C;
+}
+
+.vote_right {
+    float: right;
+    position: relative;
+    display: block;
+}
+
+.text {
+    position: absolute;
+}
